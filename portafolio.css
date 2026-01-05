@@ -1,53 +1,63 @@
-        body {
-            scroll-behavior: smooth;
-            background-color: #0f172a;
-            color: #e5e7eb;
-            font-family: 'Segoe UI', sans-serif;
-        }
 
-        .navbar {
-            backdrop-filter: blur(10px);
-            background-color: rgba(15, 23, 42, 0.85);
-        }
+body{
+scroll-behavior:smooth;
+background:#020617;
+color:#e5e7eb;
+font-family:'Segoe UI',sans-serif;
+}
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: radial-gradient(circle at top, #2563eb, #020617);
-        }
 
-        .hero h1 span {
-            color: #38bdf8;
-        }
+.navbar{
+backdrop-filter:blur(10px);
+background:rgba(2,6,23,.85);
+}
 
-        .section {
-            padding: 100px 0;
-        }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
-        }
+/* HERO con menos azul */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+background:linear-gradient(180deg,#020617 0%,#0b1c3a 45%,#020617 100%);
+}
 
-        .project-card {
-            transition: all .4s ease;
-            cursor: pointer;
-        }
 
-        .project-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(56, 189, 248, .3);
-        }
+.hero span{color:#38bdf8}
 
-        .badge-skill {
-            background: linear-gradient(135deg, #38bdf8, #2563eb);
-            margin: 4px;
-        }
 
-        footer {
-            background: #020617;
-            padding: 30px 0;
-        }
+.section{padding:100px 0}
+
+
+.glass{
+background:rgba(255,255,255,.04);
+border-radius:16px;
+padding:24px;
+border:1px solid rgba(255,255,255,.06);
+}
+
+
+.project-card{transition:.4s ease}
+.project-card:hover{transform:translateY(-8px)}
+
+
+/* etiquetas más discretas */
+.tech-tag{
+font-size:.75rem;
+padding:4px 10px;
+border:1px solid #334155;
+border-radius:20px;
+color:#cbd5f5;
+margin:2px;
+}
+
+
+.skills-grid img{
+width:48px;
+height:48px;
+margin:12px;
+filter:grayscale(20%);
+transition:.3s;
+}
+.skills-grid img:hover{transform:scale(1.15);filter:none}
+
+footer{background:#020617;padding:30px 0}
