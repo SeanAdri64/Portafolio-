@@ -28,3 +28,23 @@ $(window).on('scroll', function () {
     entry.target.classList.add('animate__fadeInUp');
   }
 });
+
+const modal = document.getElementById("projectModal");
+const iframe = document.getElementById("modalVideo");
+
+modal.addEventListener("show.bs.modal", function (event) {
+  const card = event.relatedTarget;
+
+  document.getElementById("modalTitle").textContent =
+    card.getAttribute("data-title");
+
+  document.getElementById("modalDesc").textContent =
+    card.getAttribute("data-desc");
+
+  iframe.src = card.getAttribute("data-video") + "?autoplay=1";
+});
+
+modal.addEventListener("hidden.bs.modal", function () {
+  iframe.src = "";
+});
+
